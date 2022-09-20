@@ -6,8 +6,8 @@ class Diary
   def add(entry)
     title, contents = entry.split(': ')[0], entry.split(': ')[1]
     @entry_list.push ({
-      :title => title,
-      :contents => contents
+      title: title,
+      contents: contents
     })
   end
 
