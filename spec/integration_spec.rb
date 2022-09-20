@@ -13,7 +13,7 @@ RSpec.describe 'Diary integration with Phonebook' do
       expect(phone_book.view).to eq '07777777777, 08888877777'
     end
 
-    context "there are 4 phone numbers" do
+    context "there are 3 phone numbers" do
       it 'saves all phone numbers to phonebook' do
         diary = Diary.new
         phone_book = Phonebook.new
