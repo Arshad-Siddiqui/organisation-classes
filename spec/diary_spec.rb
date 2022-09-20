@@ -18,7 +18,7 @@ RSpec.describe Diary do
   end
 
   describe '#list' do
-    it 'returns multiple contents in a comma separated list' do
+    it 'returns multiple titles in a comma separated list' do
       diary = Diary.new
       diary.add('Monday: Go to sleep')
       diary.add('Tuesday: Pair programming')
