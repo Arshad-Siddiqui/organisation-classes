@@ -37,4 +37,10 @@ class Diary
     }[-1][:title] #Returns title of longest string that didn't get
     # filtered
   end
+
+  def see_everything
+    @entry_list.map {|entry|
+      entry[:contents]
+    }.join(', ')
+  end
 end

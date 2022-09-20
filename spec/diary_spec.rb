@@ -36,4 +36,14 @@ RSpec.describe Diary do
       expect(diary.entry_to_read(2, 5)).to eq 'Wednesday' # User will have to use view to see this
     end # User can only read 4 words so in this case Wednesday with 4 words
   end
+
+  describe '#see_everything' do
+    it 'returns all the contents in a comma separated list' do
+      diary = Diary.new
+      diary.add('Monday: Go to sleep')
+      diary.add('Tuesday: Pair programming')
+      diary.add('Wednesday: an amount of words that is closer to 10')
+      expect(diary.see_everything).to eq 'Go to sleep, Pair programming, an amount of words that is closer to 10'
+    end
+  end
 end
